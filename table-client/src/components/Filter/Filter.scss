@@ -1,0 +1,37 @@
+@import '../../styles/templates.scss';
+
+.filter {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 35px;
+  margin-bottom: 15px;
+
+  &__input {
+    padding: 5px 10px;
+    font-size: 16px;
+    @extend %border;
+    width: 100px;
+    margin-right: auto;
+  }
+
+  &__button {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2e2e2e;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}

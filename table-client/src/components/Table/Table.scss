@@ -1,0 +1,42 @@
+@import '../../styles/templates.scss';
+
+.table {
+  &__header {
+    @extend %table-row;
+  }
+
+  &__header-text {
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  &__header-sort-button {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__header-sort-button::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../../assets/sort-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 13px;
+    height: 13px;
+    transition: transform 0.3s;
+  }
+
+  &__header-sort-button_desc::after {
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  &__header-sort-button_asc::after {
+    transform: translateY(-50%) rotate(-90deg);
+  }
+}
